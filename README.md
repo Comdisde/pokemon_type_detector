@@ -2,7 +2,7 @@
 
 ![cvmod](https://img.shields.io/static/v1.svg?label=version&message=v1.0&color=green)  ![python](https://img.shields.io/static/v1.svg?label=python&message=3.7&color=blue)
 
-##Overview
+## Overview
 
 **Pokemon Type Detector** es un modelo de deeplearning pre-entrenado que tiene la finalidad de detectar el tipo de pokemon que se le ingrese.
 El modelo es una variante del **VGG16** con los pesos de imagenet. 
