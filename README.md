@@ -30,8 +30,8 @@ El modelo puede ser importado desde el archivo [pokemon_detector_type.py](src/po
 
 ```python
 predict_type(image):
-"""[summary]
-
+    """
+    Display image, with predictions.
     Parameters
     ----------
     pokemon_img : PIL.Image
@@ -53,3 +53,13 @@ También puede ser usado con un front hecho en django ejecutando:
 ```console
 django-admin python front/pokemon_type_detector_app/manage.py runserver
 ```
+## Dataset
+El dataset para obtener los nombres y los tipos:https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420
+
+Para obetener las imagenes de cada pokemon se ejecuta el  notebook **image_downloader.ipynb** 
+
+
+## Training
+
+
+
