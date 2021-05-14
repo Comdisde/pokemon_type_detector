@@ -21,12 +21,33 @@ from tensorflow.keras.models import load_model
 sns.set_style("whitegrid")
 PATH = os.path.dirname(os.path.abspath(__file__))
 def get_concat_h(im1, im2):
+    """Concat two image in horizontal way
+
+    Parameters
+    ----------
+    im1 : PIL image
+        image one
+    im2 : PIL image
+        image two
+
+    Returns
+    -------
+    PIL image
+        Horizontally concatenated image
+    """
     dst = Image.new('RGB', (im1.width + im2.width, im1.height))
     dst.paste(im1, (0, 0))
     dst.paste(im2, (im1.width, 0))
     return dst
 
 def get_proba_plot(data_type):
+    """Get image with proba for each class 
+
+    Parameters
+    ----------
+    data_type : Pandas DataFrame
+        Dataframe with probability types
+    """
     buffer = io.BytesIO()
     plt.subplots(figsize = (25,15))
     ax = sns.barplot(x='proba', y='type', data=data_type, palette = "Blues_r")
@@ -44,11 +65,33 @@ def get_proba_plot(data_type):
     return chart_probability
 
 def remove_transparency(image):
+    """Remove transparency for a image 
+
+    Parameters
+    ----------
+    image : PIL image
+        image to remove transparency
+
+    Returns
+    -------
+    PIL image
+        Image without transparency
+    """
     new_image = Image.new("RGBA", image.size, "WHITE")
     new_image.paste(image, (0, 0), image)
     new_image.convert('RGB')
     return new_image
 def get_pokemon_show(pokemon_img, pokemon = ""):
+    """Return chart with pokemon name
+
+    Parameters
+    ----------
+    pokemon_img : PIL image
+        pokemon image to show 
+    pokemon : str, optional
+        name of pokemon, by default ""
+    """    
+    
     if isinstance(pokemon_img,str):
         pokemon_img = Image.open(pokemon_img)
     pokemon_img = pokemon_img.resize((256,256)).convert("RGBA")
@@ -81,6 +124,21 @@ def get_pokemon_show(pokemon_img, pokemon = ""):
     return background
 
 def predict_type(pokemon_img,pokemon):
+    """
+    Display image, with predictions.
+    Parameters
+    ----------
+    pokemon_img : PIL.Image
+        Image open with pillow 
+        
+    pokemon : str
+        Pokemon name with base on data/pokedex_(Update_04.21).csv
+
+    Returns
+    -------
+    PIL image with  comparing the input and the prediction
+
+    """
     if isinstance(pokemon_img,str):
         pokemon_img = Image.open(pokemon_img)
     cart_pokemon = get_pokemon_show(pokemon_img,pokemon)
