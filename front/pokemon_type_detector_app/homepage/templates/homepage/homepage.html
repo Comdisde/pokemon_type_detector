@@ -1,0 +1,55 @@
+
+{% extends "homepage/base.html" %}
+
+{% load static %} 
+
+
+{% block content %}
+
+<div class="slider-area position-relative" style = "margin : auto; width: 88%;">
+    <div class="slider-active">
+        <!-- Single Slider -->
+        <div class="single-slider slider-height d-flex align-items-center" style = "margin-top: -50px; " >
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-8 col-md-9 col-sm-10">
+                        <div class="hero__caption">
+                            {% comment %} <span data-animation="fadeInLeft" data-delay=".1s" style="margin-top: 120px;">Feature Extractor</span> {% endcomment %}
+                            <h1 data-animation="fadeInLeft" data-delay=".5s" style="margin-top: 100px;">Pokemon type detector</h1>
+                            <!-- Hero-btn -->
+                            {% comment %} <div class="slider-btns">
+                                <p class="video-cap d-none d-sm-blcok" data-animation="fadeInRight" data-delay="1.0s">S<br></p>
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <img src="data:image/png;base64, {{ image_base_64 }}" alt="Model Result" 
+            style = "width: 80%; margin: auto; box-shadow: -50px -50px 0 -40px var(--purple), 50px 50px 0 -40px var(--purple);" />
+            
+        </div>
+        {% comment %} <div style="opacity: 0;">
+            p
+        </div> {% endcomment %}
+        <form method="post" enctype="multipart/form-data">
+        
+            <div class="col-sm" style = "width: 24%; margin: auto;">
+                {% csrf_token %}
+                <input class="form-control" type="text" placeholder="Type your pokemon" style=" background-color : #001322; color:white;" name ="pokemon" id="customPokemon" value="Bulbasaur" >
+                {% comment %} <label class="form-label" for="customFile"></label> {% endcomment %}
+                <input type="file" class="form-control" id="customFile"  name="myfile"    />
+                <button id='buttonid' type="submit" class="btn btn-primary"  value="submit" onclick="document.getElementById('customFile').form.submit()">Upload MB</button>
+
+            </div>
+        </form>
+    </div>
+</div>    
+
+
+
+
+
+{% endblock content %}
+
