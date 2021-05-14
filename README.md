@@ -56,10 +56,17 @@ django-admin python front/pokemon_type_detector_app/manage.py runserver
 ## Dataset
 El dataset para obtener los nombres y los tipos:https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420
 
-Para obetener las imagenes de cada pokemon se ejecuta el  notebook **image_downloader.ipynb** 
+Para obetener las imagenes de cada pokemon se ejecuta el  notebook [image_downloader.ipynb](notebooks/image_downloader.ipynb)
+
 
 
 ## Training
+
+El entrenamiento se realiza con las imagenes descargadas y se genera la variable objetivo juntando los dos tipos de cada pokemon.
+También es creada la clases de "No_type" como una carencia de segundo tipo.
+
+El entrenamiento es hecho en el notebook  [pokemon_type_detector_train.ipynb](notebooks/pokemon_type_detector_train.ipynb)
+
 
 
 
