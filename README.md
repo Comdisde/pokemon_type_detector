@@ -48,11 +48,23 @@ predict_type(image):
 
 ```
 
+<p align="center">
+<img src="img/output_notebook.png">
+</p>
+
+
+
 También puede ser usado con un front hecho en django ejecutando:
 
 ```console
 django-admin python front/pokemon_type_detector_app/manage.py runserver
 ```
+<p align="center">
+<img src="img/output_pagina.png">
+</p>
+
+
+
 ## Dataset
 El dataset para obtener los nombres y los tipos:https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420
 
