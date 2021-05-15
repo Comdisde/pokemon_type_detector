@@ -49,7 +49,7 @@ predict_type(image):
 ```
 
 <p align="center">
-<img src="img/output_notebook.png">
+<img src="imgs/output_notebook.png">
 </p>
 
 
@@ -60,7 +60,7 @@ También puede ser usado con un front hecho en django ejecutando:
 django-admin python front/pokemon_type_detector_app/manage.py runserver
 ```
 <p align="center">
-<img src="img/output_pagina.png">
+<img src="imgs/output_pagina.png">
 </p>
 
 
