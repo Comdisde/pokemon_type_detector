@@ -81,4 +81,9 @@ El entrenamiento es hecho en el notebook  [pokemon_type_detector_train.ipynb](no
 
 
 
+## Reference 
 
+Imgs logos: https://es.vecteezy.com/arte-vectorial/119820-libre-tipo-pokemon-vector
+Pokedex: https://www.kaggle.com/mariotormo/complete-pokemon-dataset-updated-090420
+
+Nota: Para más acerca del proceso https://www.youtube.com/channel/UCDGBKWc6sHALO1a1Oou8o4w/
